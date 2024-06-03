@@ -6,6 +6,7 @@ import java.io.ByteArrayInputStream;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
@@ -18,11 +19,24 @@ public class BasePage {
 		return getDriver().findElement(locator);
 		
 	}
-	public void writeText(By locator, String text) {
+	public void writeText(By locator, long mil, String text) {
 		getElement(locator).sendKeys(text);
+		try {
+			Thread.sleep(mil);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
-	public void clickOnElement(By locator) {
+	public void clickOnElement(By locator, long mil) {
 		getElement(locator).click();
+		
+		try {
+			Thread.sleep(mil);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	public void takeScreenShot(String name) {
 		Allure.addAttachment(name, new ByteArrayInputStream(((TakesScreenshot)(getDriver())).getScreenshotAs(OutputType.BYTES)));
@@ -32,12 +46,43 @@ public class BasePage {
 		JavascriptExecutor js = (JavascriptExecutor)getDriver();
 		js.executeScript("arguments[0].scrollIntoView();", el);
 	}
-	public void hoverTest(By locator) throws InterruptedException {
+	public void hoverTest(By locator, long mil)  {
 	
 		Actions action = new Actions(getDriver());
 		WebElement hoverExample = getDriver().findElement(locator);
 		action.moveToElement(hoverExample).perform();
-		Thread.sleep(5000);
+		try {
+			Thread.sleep(mil);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
+	
+	
+	public void enterButtonEvent(By locator, long mil)  {
+		getElement(locator).sendKeys(Keys.ENTER);
+		try {
+			Thread.sleep(mil);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	
 
+	}
+	
+	public void goToBack(By locator, long mil , int time) {
+		
+		for(int i = 0 ; i < time ; i++ ) {
+			getDriver().navigate().back();
+			try {
+				Thread.sleep(mil);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
 }
