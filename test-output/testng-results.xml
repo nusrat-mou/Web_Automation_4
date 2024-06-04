@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-03T17:41:54 BDT" name="Default suite" finished-at="2024-06-03T17:42:41 BDT" duration-ms="46571">
+  <suite started-at="2024-06-04T18:57:43 BDT" name="Default suite" finished-at="2024-06-04T18:58:35 BDT" duration-ms="52189">
     <groups>
     </groups>
-    <test started-at="2024-06-03T17:41:54 BDT" name="Default test" finished-at="2024-06-03T17:42:41 BDT" duration-ms="46571">
-      <class name="testcases.SearchTest">
-        <test-method is-config="true" signature="setBrowser()[pri:0, instance:testcases.SearchTest@3b96c42e]" started-at="2024-06-03T17:41:54 BDT" name="setBrowser" finished-at="2024-06-03T17:41:56 BDT" duration-ms="1906" status="PASS">
+    <test started-at="2024-06-04T18:57:43 BDT" name="Default test" finished-at="2024-06-04T18:58:35 BDT" duration-ms="52189">
+      <class name="testcases.LoginTest">
+        <test-method is-config="true" signature="setBrowser()[pri:0, instance:testcases.LoginTest@3899782c]" started-at="2024-06-04T18:57:43 BDT" name="setBrowser" finished-at="2024-06-04T18:57:44 BDT" duration-ms="1576" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBrowser -->
-        <test-method signature="searchTestCase()[pri:0, instance:testcases.SearchTest@3b96c42e]" started-at="2024-06-03T17:41:56 BDT" name="searchTestCase" finished-at="2024-06-03T17:42:40 BDT" duration-ms="44260" status="PASS">
+        <test-method signature="LoginTestPage()[pri:0, instance:testcases.LoginTest@3899782c]" started-at="2024-06-04T18:57:44 BDT" name="LoginTestPage" finished-at="2024-06-04T18:58:34 BDT" duration-ms="49821" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchTestCase -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:testcases.SearchTest@3b96c42e]" started-at="2024-06-03T17:42:40 BDT" name="quitBrowser" finished-at="2024-06-03T17:42:41 BDT" duration-ms="243" status="PASS">
+        </test-method> <!-- LoginTestPage -->
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:testcases.LoginTest@3899782c]" started-at="2024-06-04T18:58:34 BDT" name="quitBrowser" finished-at="2024-06-04T18:58:35 BDT" duration-ms="611" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
-      </class> <!-- testcases.SearchTest -->
+      </class> <!-- testcases.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

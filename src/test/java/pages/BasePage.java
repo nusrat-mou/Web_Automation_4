@@ -41,10 +41,16 @@ public class BasePage {
 	public void takeScreenShot(String name) {
 		Allure.addAttachment(name, new ByteArrayInputStream(((TakesScreenshot)(getDriver())).getScreenshotAs(OutputType.BYTES)));
 	}
-	public void scrollToElement(By locator) {
+	public void scrollToElement(By locator, long mil) {
 		WebElement el = getElement(locator);
 		JavascriptExecutor js = (JavascriptExecutor)getDriver();
-		js.executeScript("arguments[0].scrollIntoView();", el);
+		js.executeScript("arguments[0].scrollIntoView(true);", el);
+		try {
+			Thread.sleep(mil);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	public void hoverTest(By locator, long mil)  {
 	
@@ -73,7 +79,7 @@ public class BasePage {
 
 	}
 	
-	public void goToBack(By locator, long mil , int time) {
+	public void goToBackMultipleTimes(By locator, long mil , int time) {
 		
 		for(int i = 0 ; i < time ; i++ ) {
 			getDriver().navigate().back();
@@ -83,6 +89,16 @@ public class BasePage {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		}
+	}
+	
+	public void goToBackOnce(By locator, long mil) {
+		getDriver().navigate().back();
+		try {
+			Thread.sleep(mil);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 }

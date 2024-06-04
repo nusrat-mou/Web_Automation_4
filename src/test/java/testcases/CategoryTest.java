@@ -12,13 +12,13 @@ public class CategoryTest extends BaseDriverSetup {
 		Thread.sleep(3000);
 		
 		
-		category.hoverTest(category.classSixToTwelve);
+		category.hoverTest(category.classSixToTwelve,3000);
 		Thread.sleep(3000);
 		
-		category.clickOnElement(category.HSC);
+		category.clickOnElement(category.HSC,3000);
 		Thread.sleep(3000);
 		
-		category.clickOnElement(category.CourseDetails);
+		category.clickOnElement(category.CourseDetails,3000);
 		Thread.sleep(3000);
 	}
 

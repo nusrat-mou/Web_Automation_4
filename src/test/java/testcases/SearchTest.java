@@ -25,7 +25,7 @@ public class SearchTest extends BaseDriverSetup {
 		search.clickOnElement(search.filteredCourse, 3000);
 		search.clickOnElement(search.clickEnroll, 3000);
 		search.clickOnElement(search.shuruKorun, 3000);
-		search.goToBack(null, 2000, 4);
+		search.goToBackMultipleTimes(null, 2000, 4);
 
 	}
 	
