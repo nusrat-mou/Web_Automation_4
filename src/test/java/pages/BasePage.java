@@ -74,10 +74,13 @@ public class BasePage {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
+			
+		}
 		
 	
 
-	}
+	
 	
 	public void goToBackMultipleTimes(By locator, long mil , int time) {
 		

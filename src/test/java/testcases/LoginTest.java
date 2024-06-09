@@ -29,7 +29,7 @@ public class LoginTest extends BaseDriverSetup {
 	public void LoginTestPage() throws InterruptedException {
 		getDriver().get(login.loginURL);
 		Thread.sleep(3000);
-		System.out.println("Enter your Email or Phone : ");
+		System.out.println("Enter your Email or Phone : ");            
 		Scanner sc = new Scanner(System.in);
 		String mobile = sc.nextLine();
 		
