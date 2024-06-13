@@ -25,6 +25,7 @@ public class BaseDriverSetup {
 		}
 
 		public static WebDriver getDriver() {
+			
 			return LOCAL_DRIVER.get();
 		}
 
@@ -34,6 +35,7 @@ public class BaseDriverSetup {
 				WebDriverManager.chromedriver().setup();
 				ChromeOptions chromeOptions = new ChromeOptions();
 				chromeOptions.addArguments("--remote-allow-origins=*");
+				
 				return new ChromeDriver(chromeOptions);
 
 			case "edge":

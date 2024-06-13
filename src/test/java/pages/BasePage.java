@@ -77,7 +77,17 @@ public class BasePage {
 
 			
 		}
-		
+	public void ClickMultipleTimes(By locator, long mil, int time) {
+		for(int i = 0 ; i < time ; i++ ) {
+			getElement(locator).click();
+			try {
+				Thread.sleep(mil);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
 	
 
 	
