@@ -66,9 +66,9 @@ public class HomePageTest extends BaseDriverSetup{
 		home.clickOnElement(home.selectDate, 2000);
 		home.clickOnElement(home.clickContinue, 2000);
 		home.clickOnElement(home.selectCurriculamDetails, 2000);
+		home.scrollToElement(home.confirmBooking, 2000);
 		home.clickOnElement(home.feedback1, 2000);
 		home.clickOnElement(home.feedback2, 2000);
-		home.scrollToElement(home.confirmBooking, 2000);
 		home.clickOnElement(home.feedback3, 2000);
 		home.clickOnElement(home.confirmBooking, 2000);
 		home.goToBackMultipleTimes(null, 2000, 3);
